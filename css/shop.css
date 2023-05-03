@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: rgb(240, 240, 240);
+}
+
+a{
+    text-decoration: none;
+    font-size: 2em;
+    font-family: inherit;
+    color: inherit;
+}
+
+p{
+    font-size: 1.8em;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header,
+footer{
+    background-color:#30343F ;
+    padding: 95px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    /*gap: var(--spacing-20);*/
+    /*word-spacing: 5px;*/
+}
+
+.navbar__logo{
+    max-width: 300px;
+}
+
+.navbar__link{
+    /*font-size: var(--font-medium);*/
+    font-size: 1.8em;
+    /*padding: var(--spacing-8) var(--spacing-16);*/
+    padding: 8px 16px; 
+    display: inline-block;
+    transition:background .3s ease-in-out;
+    position: relative;
+}
+
+.navbar__link:hover{
+/*background-color: var(--primary-900);*/
+    background-color: rgb(184, 24, 42);
+}
+
+.with-icon{
+    display: flex;
+    align-items: center;
+    /*gap: var(--spacing-8);*/
+}
+
+iconify-icon{
+    padding: 8px;
+}
+
+.with-submenu:hover .submenu{
+    display: block;
+}
+
+.submenu{
+    display: none;
+    width:300px ;
+    position: absolute;
+    background-color: #30343f;
+}
+
+.submenu__link{
+    display:block;
+    padding: 8px 16px;
+    font-size: .9em;
+    transition:background .3s ease-in-out;
+}
+
+.submenu__link:hover{
+    background:rgb(184, 24, 42);
+}
+
+img{
+    width: 100%;
+}
+
+ul, 
+ol {
+    list-style: none;
+}
+
+ul li {
+    font-family:'Raleway';
+}
+
+li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+/*******************************************************************************************************************************************************/
+/*div svg {
+    width: 35%;
+    padding-left: 33px;
+}*/
+
+.hero{
+    background-image: url(../static/star-wars/funkos-banner.webp);
+    padding: 128px;
+    background-size: cover;
+    background-position: top;
+    color:#FFFFFF;
+    background-attachment: fixed;
+    position: relative;
+    /*height: 888px;*/
+}
+
+.hero::before{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter:blur(2px) brightness(.9);
+}
+
+.hero__content{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    z-index: 2;
+    position: relative;
+}
+
+.hero__text,
+.hero__content,
+.hero__title,
+.hero__link{
+    padding: 10px;
+}
+
+.hero__title{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 38px;
+    color: #FFFFFF;
+}
+
+.hero__text{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 18px;
+    color:white;
+}
+
+.hero__link{
+    display: inline-block;
+    width: 8%;
+    font-size: 22px;
+    padding: 12px 18px;
+    color: #1b1818;
+    text-decoration: none;
+    border-radius: 50px;
+    background-color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 3.s ease-in-out ;
+}
+
+.hero__link:hover{
+    background-color: rgb(184, 24, 42);
+    color: #30343F;
+}
+/********************************************************************************************************/
+
+    
+
+
+.collection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.collection__content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.collection__text,
+.collection__link,
+.collection__title{
+    padding: 23px;
+}
+
+.collection__title{
+    font-family: 'raleway';
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.collection__text{
+    font-family: 'raleway';
+    font-size: 24px;
+    font-weight: 300;
+}
+.linea{
+    margin-left: 24px;
+    width: 90%;
+    border-bottom: 2px solid rgb(161, 12, 17);
+    margin-bottom: 27px;
+}
+
+.collection__link{
+    display: inline-block;
+    font-size: 1.8em;
+    color:white;
+    background-color: black;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-left: 17px;
+    transition: background .3s ease-in-out;
+}
+
+.collection__link:hover{
+    background-color: rgb(184, 24, 42);;
+}
+
+/*.contenedorBannerStar{
+    width:600px;
+    height: 600px;
+}*/
+
+
+/*.baby-yoda{
+    margin-top: 14%; 
+}
+
+h3{
+    width: 100%;
+    font-family: 'Raleway';
+    
+    line-height: 54px;
+    margin: 0;
+    display: block;
+}
+
+/* --- Banner --- */
+/*.banner {
+    width: 92%;
+    /*height: 400px;*/
+    /*background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorBanner {
+    width: 48%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h2 {
+    width: 80%;
+    font-size: 46px;
+    margin: 0;
+    font-family: 'raleway';
+    line-height: 54px;
+    color: #111111;
+    text-transform: uppercase;
+}
+
+.p{
+    font-family: 'raleway';
+    font-size: 24px;
+    line-height: 28px;
+    width: 440px;
+}
+
+.boton,
+h2,
+.p{
+    padding: 10px;
+}
+
+.boton{
+    margin-top: 20px;
+}
+
+.h{
+    width: 645px;
+    height: 5px;
+    border: 0 none;
+    margin-top: 32px;
+    background-color: rgb(223, 23, 23);
+}
+
+/* --- Productos --- */
+/*.tarjetas {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom:  40px;
+    display: flex;
+    justify-content: space-between;
+/*.tarjeta {
+    width: 32%;
+    background-color: #fff ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tarjeta .imagen {
+    width: 100%;
+    height: 250px;
+    object-fit:contain;
+}
+
+/*los enunciados ya vienen con margen, por ello se aplica margin 0 para sacarlo*/
+/*.titulo h4 {
+    width: 100%;
+    font-size: 20px;
+    margin: 0;
+}
+
+.precio h4 {
+    width: 100%;
+    font-size: 30px;
+    margin: 20px 0;
+}
+/*cursor pointer es para aplicar la manito de mouse*/
+/*.botonCompra button {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 7px;
+    cursor:pointer;
+    background-color: #0d6efd;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.botonCompra button:hover {
+    background-color: #fff;
+    border: 1px solid #0d6efd;
+    color: black;
+
+}
+
+
+
+
+/* --- Pie de página --- *//*aling-items centre, centra el contenido al eje*/
+/*footer{
+    width:100%;
+    background-color: #201b1b19;
+    padding: 80px 0;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+    display: flex;
+}
+
+
+.containerR{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+
+
+
+.autor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: #9a9ca1;
+}
+
+
+
+
+.star-verde{
+    float: right;
+    }
+
+.starNaranja{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 83%;
+}
+
+.logoR{
+        width: 70%;
+    }*/
